@@ -139,20 +139,19 @@ const VisitSection = () => {
               ))}
             </div>
 
-            {/* Map Embed Placeholder */}
-            <div className="mt-6 rounded-xl overflow-hidden bg-secondary/50 aspect-video flex items-center justify-center group">
-              <a
-                href={siteConfig.mapsLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <MapPin className="w-8 h-8" />
-                <span className="text-sm font-medium flex items-center gap-1">
-                  View on Google Maps
-                  <ExternalLink className="w-3 h-3" />
-                </span>
-              </a>
+            {/* Embedded Google Map */}
+            <div className="mt-6 rounded-xl overflow-hidden bg-secondary/50 aspect-video">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5837279788247!2d-123.2138!3d49.2627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672cc2d4f0f8b%3A0x7c0e0c0b0a0b0a0b!2s4372%20W%2010th%20Ave%2C%20Vancouver%2C%20BC%20V6R%202H7!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Little Umbrella location on Google Maps"
+                className="w-full h-full"
+              />
             </div>
           </motion.div>
         </div>

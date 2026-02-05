@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import VisitSection from "@/components/VisitSection";
 import SocialSection from "@/components/SocialSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { siteConfig } from "@/lib/config";
 
@@ -92,6 +93,7 @@ const Index = () => {
           <ReviewsSection />
           <VisitSection />
           <SocialSection />
+          <ContactSection />
         </main>
         <Footer />
       </div>

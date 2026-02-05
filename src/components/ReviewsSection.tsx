@@ -20,19 +20,25 @@ const ReviewsSection = () => {
             What Our Guests Say
           </h2>
           
-          {/* Overall Rating */}
+          {/* Overall Rating - 4.8 stars (4 full + 0.8 partial) */}
           <div className="flex items-center justify-center gap-3 mt-6">
             <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-5 h-5 ${
-                    i < Math.floor(reviews.overall)
-                      ? "fill-terracotta text-terracotta"
-                      : "text-muted-foreground/30"
-                  }`}
-                />
-              ))}
+              {[...Array(5)].map((_, i) => {
+                const fillPercentage = Math.min(100, Math.max(0, (reviews.overall - i) * 100));
+                return (
+                  <div key={i} className="relative w-5 h-5">
+                    {/* Background star (empty) */}
+                    <Star className="absolute w-5 h-5 text-muted-foreground/30" />
+                    {/* Foreground star (filled) with clip */}
+                    <div
+                      className="absolute overflow-hidden"
+                      style={{ width: `${fillPercentage}%` }}
+                    >
+                      <Star className="w-5 h-5 fill-terracotta text-terracotta" />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <span className="text-2xl font-semibold text-foreground">{reviews.overall}</span>
             <span className="text-muted-foreground">/5</span>
