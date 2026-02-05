@@ -75,7 +75,7 @@ const UmbrellaSVG = () => (
     className="w-full h-full drop-shadow-lg"
     aria-label="Little Umbrella logo - an open umbrella"
   >
-    {/* Umbrella canopy */}
+    {/* Umbrella canopy - warm terracotta */}
     <ellipse
       cx="100"
       cy="70"
@@ -98,10 +98,10 @@ const UmbrellaSVG = () => (
       fill="none"
     />
     
-    {/* Canopy edge detail */}
+    {/* Canopy edge detail - amber accent */}
     <path
       d="M25 70 Q37.5 80 50 70 Q62.5 80 75 70 Q87.5 80 100 70 Q112.5 80 125 70 Q137.5 80 150 70 Q162.5 80 175 70"
-      className="stroke-sage-light fill-none"
+      className="stroke-amber-light fill-none"
       strokeWidth="3"
       strokeLinecap="round"
     />
@@ -125,12 +125,12 @@ const UmbrellaSVG = () => (
       strokeLinecap="round"
     />
     
-    {/* Top tip */}
+    {/* Top tip - golden accent */}
     <circle
       cx="100"
       cy="35"
       r="4"
-      className="fill-terracotta"
+      className="fill-golden"
     />
     
     {/* Subtle shine on canopy */}
