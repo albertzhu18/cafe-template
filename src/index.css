@@ -12,61 +12,63 @@
   :root {
     /* Warm cream background */
     --background: 40 33% 97%;
-    --foreground: 25 15% 15%;
+    --foreground: 25 20% 12%;
 
     /* Card surfaces - slightly warmer */
-    --card: 40 30% 95%;
-    --card-foreground: 25 15% 15%;
+    --card: 38 30% 95%;
+    --card-foreground: 25 20% 12%;
 
-    --popover: 40 30% 95%;
-    --popover-foreground: 25 15% 15%;
+    --popover: 38 30% 95%;
+    --popover-foreground: 25 20% 12%;
 
-    /* Primary: Muted sage green */
-    --primary: 100 18% 45%;
+    /* Primary: Warm terracotta/burnt orange */
+    --primary: 18 55% 48%;
     --primary-foreground: 40 33% 97%;
 
     /* Secondary: Warm beige */
-    --secondary: 35 25% 90%;
-    --secondary-foreground: 25 15% 20%;
+    --secondary: 32 30% 88%;
+    --secondary-foreground: 25 20% 15%;
 
     /* Muted tones */
-    --muted: 35 20% 92%;
-    --muted-foreground: 25 10% 45%;
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 15% 40%;
 
-    /* Accent: Warm terracotta */
-    --accent: 18 55% 55%;
+    /* Accent: Deep amber */
+    --accent: 28 70% 50%;
     --accent-foreground: 40 33% 97%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 40 33% 97%;
 
     /* Borders and inputs */
-    --border: 35 20% 85%;
-    --input: 35 20% 88%;
-    --ring: 100 18% 45%;
+    --border: 32 25% 82%;
+    --input: 32 25% 85%;
+    --ring: 18 55% 48%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens for Little Umbrella */
+    /* Custom tokens for Little Umbrella - Autumn palette */
     --cream: 40 33% 97%;
-    --cream-dark: 35 25% 92%;
-    --charcoal: 25 15% 15%;
-    --charcoal-light: 25 10% 35%;
-    --sage: 100 18% 45%;
-    --sage-light: 100 15% 75%;
-    --terracotta: 18 55% 55%;
-    --terracotta-light: 18 45% 75%;
-    --warm-brown: 25 30% 25%;
+    --cream-dark: 35 28% 90%;
+    --charcoal: 25 20% 12%;
+    --charcoal-light: 25 15% 35%;
+    --terracotta: 18 55% 48%;
+    --terracotta-light: 18 40% 70%;
+    --amber: 28 70% 50%;
+    --amber-light: 32 60% 75%;
+    --warm-brown: 20 35% 25%;
+    --rust: 12 60% 42%;
+    --golden: 38 75% 55%;
 
     /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(40 33% 97%) 0%, hsl(35 25% 92%) 100%);
-    --gradient-sage: linear-gradient(135deg, hsl(100 18% 45%) 0%, hsl(100 22% 35%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(40 33% 97%) 0%, hsl(35 25% 90%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(40 33% 97%) 0%, hsl(35 28% 90%) 100%);
+    --gradient-autumn: linear-gradient(135deg, hsl(18 55% 48%) 0%, hsl(28 70% 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(40 33% 97%) 0%, hsl(35 30% 92%) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(25 15% 15% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(25 15% 15% / 0.1);
-    --shadow-elevated: 0 20px 50px -15px hsl(25 15% 15% / 0.15);
+    --shadow-soft: 0 4px 20px -4px hsl(25 20% 12% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(25 20% 12% / 0.1);
+    --shadow-elevated: 0 20px 50px -15px hsl(25 20% 12% / 0.15);
 
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
@@ -74,13 +76,13 @@
 
     /* Sidebar (keeping for compatibility) */
     --sidebar-background: 40 33% 97%;
-    --sidebar-foreground: 25 15% 15%;
-    --sidebar-primary: 100 18% 45%;
+    --sidebar-foreground: 25 20% 12%;
+    --sidebar-primary: 18 55% 48%;
     --sidebar-primary-foreground: 40 33% 97%;
-    --sidebar-accent: 35 25% 90%;
-    --sidebar-accent-foreground: 25 15% 20%;
-    --sidebar-border: 35 20% 85%;
-    --sidebar-ring: 100 18% 45%;
+    --sidebar-accent: 32 30% 88%;
+    --sidebar-accent-foreground: 25 20% 15%;
+    --sidebar-border: 32 25% 82%;
+    --sidebar-ring: 18 55% 48%;
   }
 
   .dark {
