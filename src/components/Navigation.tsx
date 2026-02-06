@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Umbrella } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 const Navigation = () => {
