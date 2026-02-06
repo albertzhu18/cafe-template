@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Content container */}
       <div className="relative z-10 section-container text-center flex flex-col items-center">
         {/* Umbrella Animation - smaller */}
-        <div className="h-24 md:h-32 lg:h-40 mb-4">
+        <div className="h-16 md:h-20 lg:h-24 mb-3">
           <UmbrellaAnimation />
         </div>
 
