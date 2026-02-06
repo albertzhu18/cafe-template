@@ -58,6 +58,7 @@ const Navigation = () => {
             }}
             className="flex items-center gap-2 group"
           >
+            <Umbrella className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform" />
             <span className="text-xl md:text-2xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
               Little Umbrella
             </span>
