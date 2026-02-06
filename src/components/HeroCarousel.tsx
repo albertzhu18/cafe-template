@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 import carousel1 from "@/assets/carousel-1.png";
 import carousel2 from "@/assets/carousel-2.png";
@@ -7,31 +7,48 @@ import carousel4 from "@/assets/carousel-4.png";
 import carousel5 from "@/assets/carousel-5.png";
 
 const images = [carousel1, carousel2, carousel3, carousel4, carousel5];
-// Triple for seamless loop
-const allImages = [...images, ...images, ...images];
 
 const HeroCarousel = () => {
-  // Calculate the width of one set of images (5 images * ~280px each with gap)
-  const singleSetWidth = images.length * 280;
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+    
+    let animationId: number;
+    const speed = 0.5; // pixels per frame
+    
+    const animate = () => {
+      setScrollPosition((prev) => {
+        const newPosition = prev + speed;
+        // Reset when we've scrolled through one complete set
+        const singleSetWidth = scrollContainer.scrollWidth / 3;
+        if (newPosition >= singleSetWidth) {
+          return 0;
+        }
+        return newPosition;
+      });
+      animationId = requestAnimationFrame(animate);
+    };
+    
+    animationId = requestAnimationFrame(animate);
+    
+    return () => cancelAnimationFrame(animationId);
+  }, []);
 
   return (
     <div className="w-full overflow-hidden py-4">
-      <motion.div
+      <div
+        ref={scrollRef}
         className="flex gap-6"
-        animate={{
-          x: [-singleSetWidth, 0],
+        style={{ 
+          transform: `translateX(-${scrollPosition}px)`,
+          width: "fit-content"
         }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 25,
-            ease: "linear",
-          },
-        }}
-        style={{ width: "fit-content" }}
       >
-        {allImages.map((image, index) => (
+        {/* Triple the images for seamless infinite scroll */}
+        {[...images, ...images, ...images].map((image, index) => (
           <div
             key={index}
             className="flex-shrink-0 p-2 bg-white rounded-lg shadow-md"
@@ -43,7 +60,7 @@ const HeroCarousel = () => {
             />
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

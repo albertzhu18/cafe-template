@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock } from "lucide-react";
-import UmbrellaAnimation from "./UmbrellaAnimation";
+import { MapPin, Clock, Umbrella } from "lucide-react";
 import HeroCarousel from "./HeroCarousel";
 import { siteConfig } from "@/lib/config";
 
@@ -15,10 +14,15 @@ const HeroSection = () => {
 
       {/* Content container */}
       <div className="relative z-10 section-container text-center flex flex-col items-center">
-        {/* Umbrella Animation - smaller */}
-        <div className="h-16 md:h-20 lg:h-24 mb-3">
-          <UmbrellaAnimation />
-        </div>
+        {/* Simple Umbrella Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="mb-4"
+        >
+          <Umbrella className="w-12 h-12 md:w-16 md:h-16 text-primary" />
+        </motion.div>
 
         {/* Photo Carousel - between logo and description */}
         <motion.div
