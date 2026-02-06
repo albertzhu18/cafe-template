@@ -3,9 +3,9 @@
 
 export const siteConfig = {
   name: "YourNameHere Cafe",
-  tagline: "Great coffee. Honest food. Real connection.",
+  tagline: "Artomatic Coffee. Cozy vibes. Real people.",
   mission:
-    "Great coffee. Honest food. Real connection. We strive to be a neighbourhood cafe where quality and community meet.",
+    "Artomatic Coffee. Cozy vibes. Real people. We strive to be a neighbourhood cafe where quality and community meet.",
   description:
     "YourNameHere Cafe is a neighbourhood café where quality coffee and community meet. Enjoy our craft espresso, honest breakfast, and welcoming atmosphere.",
 
