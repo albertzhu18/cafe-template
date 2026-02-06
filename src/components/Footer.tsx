@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUp, Instagram, Facebook, Linkedin } from "lucide-react";
+import { ArrowUp, Instagram, Facebook, Linkedin, Umbrella } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 const Footer = () => {
