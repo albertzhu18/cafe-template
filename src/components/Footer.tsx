@@ -70,7 +70,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-background/50 text-sm">© {currentYear} Little Umbrella. All rights reserved.</p>
+          <p className="text-background/50 text-sm">© {currentYear} YourNameHere Cafe. All rights reserved.</p>
 
           {/* Back to Top Button */}
           <motion.button
