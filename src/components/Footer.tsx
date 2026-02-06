@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUp, Instagram, Facebook, Linkedin } from "lucide-react";
+import { ArrowUp, Instagram, Facebook, Linkedin, Umbrella } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 const Footer = () => {
@@ -15,7 +15,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
           {/* Brand Column */}
           <div>
-            <h3 className="font-heading text-2xl font-semibold mb-4">Little Umbrella</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Umbrella className="w-7 h-7 text-background/90" />
+              <h3 className="font-heading text-2xl font-semibold">Little Umbrella</h3>
+            </div>
             <p className="text-background/70 leading-relaxed">
               {siteConfig.tagline}
             </p>
