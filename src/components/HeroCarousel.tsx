@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import carousel1 from "@/assets/carousel-1.png";
 import carousel2 from "@/assets/carousel-2.png";
@@ -8,51 +7,39 @@ import carousel4 from "@/assets/carousel-4.png";
 import carousel5 from "@/assets/carousel-5.png";
 
 const images = [carousel1, carousel2, carousel3, carousel4, carousel5];
+// Duplicate for seamless loop
+const allImages = [...images, ...images];
 
 const HeroCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="w-full max-w-4xl mx-auto mt-8 md:mt-12">
-      <div className="relative h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-soft">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            alt={`Little Umbrella café ${currentIndex + 1}`}
-            className="absolute inset-0 w-full h-full object-cover"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.7, ease: "easeInOut" }}
-          />
-        </AnimatePresence>
-        
-        {/* Gradient overlay for better blending */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
-      </div>
-
-      {/* Dots indicator */}
-      <div className="flex justify-center gap-2 mt-4">
-        {images.map((_, index) => (
+    <div className="w-full overflow-hidden py-4">
+      <motion.div
+        className="flex gap-6"
+        animate={{
+          x: [0, -50 * images.length + "%"],
+        }}
+        transition={{
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 30,
+            ease: "linear",
+          },
+        }}
+      >
+        {allImages.map((image, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? "bg-primary w-6"
-                : "bg-muted-foreground/30"
-            }`}
-          />
+            className="flex-shrink-0 p-2 bg-white rounded-lg shadow-md"
+          >
+            <img
+              src={image}
+              alt={`Little Umbrella café ${(index % images.length) + 1}`}
+              className="w-48 h-36 md:w-64 md:h-48 object-cover rounded"
+            />
+          </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
