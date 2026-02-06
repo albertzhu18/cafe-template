@@ -142,14 +142,14 @@ const VisitSection = () => {
             {/* Embedded Google Map */}
             <div className="mt-6 rounded-xl overflow-hidden bg-secondary/50 aspect-video">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5837279788247!2d-123.2138!3d49.2627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672cc2d4f0f8b%3A0x7c0e0c0b0a0b0a0b!2s4372%20W%2010th%20Ave%2C%20Vancouver%2C%20BC%20V6R%202H7!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5400239788247!2d-123.2460!3d49.2606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672b2b2b2b2b2%3A0x1234567890abcdef!2sUniversity%20of%20British%20Columbia!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Little Umbrella location on Google Maps"
+                title="Café location on Google Maps"
                 className="w-full h-full"
               />
             </div>
