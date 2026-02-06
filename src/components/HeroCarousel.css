@@ -1,0 +1,47 @@
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.carousel-image {
+  width: 12rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .carousel-image {
+    width: 16rem;
+    height: 12rem;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
