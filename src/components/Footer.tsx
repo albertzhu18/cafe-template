@@ -17,11 +17,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Umbrella className="w-7 h-7 text-background/90" />
-              <h3 className="font-heading text-2xl font-semibold">Little Umbrella</h3>
+              <h3 className="font-heading text-2xl font-semibold">YourNameHere Cafe</h3>
             </div>
-            <p className="text-background/70 leading-relaxed">
-              {siteConfig.tagline}
-            </p>
+            <p className="text-background/70 leading-relaxed">{siteConfig.tagline}</p>
           </div>
 
           {/* Contact Column */}
@@ -29,10 +27,7 @@ const Footer = () => {
             <h4 className="font-medium text-lg mb-4">Contact</h4>
             <div className="space-y-2 text-background/70">
               <p>{siteConfig.address}</p>
-              <a
-                href={siteConfig.phoneLink}
-                className="block hover:text-background transition-colors"
-              >
+              <a href={siteConfig.phoneLink} className="block hover:text-background transition-colors">
                 {siteConfig.phone}
               </a>
             </div>
@@ -75,9 +70,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-background/50 text-sm">
-            © {currentYear} Little Umbrella. All rights reserved.
-          </p>
+          <p className="text-background/50 text-sm">© {currentYear} Little Umbrella. All rights reserved.</p>
 
           {/* Back to Top Button */}
           <motion.button
