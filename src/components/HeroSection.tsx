@@ -46,7 +46,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto text-balance">
-            A neighbourhood café where quality and community meet. Welcome to your new favourite corner.
+            A serene escape amid a bustling city. We would love to have you join us.
           </p>
 
           {/* Status Badge */}
@@ -74,12 +74,7 @@ const HeroSection = () => {
             <a href="#menu" className="btn-primary">
               View Menu
             </a>
-            <a
-              href={siteConfig.mapsLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
+            <a href={siteConfig.mapsLink} target="_blank" rel="noopener noreferrer" className="btn-secondary">
               <MapPin className="w-4 h-4 mr-2" />
               Get Directions
             </a>
