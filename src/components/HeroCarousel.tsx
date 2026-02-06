@@ -7,25 +7,29 @@ import carousel4 from "@/assets/carousel-4.png";
 import carousel5 from "@/assets/carousel-5.png";
 
 const images = [carousel1, carousel2, carousel3, carousel4, carousel5];
-// Duplicate for seamless loop
-const allImages = [...images, ...images];
+// Triple for seamless loop
+const allImages = [...images, ...images, ...images];
 
 const HeroCarousel = () => {
+  // Calculate the width of one set of images (5 images * ~280px each with gap)
+  const singleSetWidth = images.length * 280;
+
   return (
     <div className="w-full overflow-hidden py-4">
       <motion.div
         className="flex gap-6"
         animate={{
-          x: [0, -50 * images.length + "%"],
+          x: [-singleSetWidth, 0],
         }}
         transition={{
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 30,
+            duration: 25,
             ease: "linear",
           },
         }}
+        style={{ width: "fit-content" }}
       >
         {allImages.map((image, index) => (
           <div
