@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock } from "lucide-react";
 import UmbrellaAnimation from "./UmbrellaAnimation";
+import HeroCarousel from "./HeroCarousel";
 import { siteConfig } from "@/lib/config";
 
 const HeroSection = () => {
