@@ -28,8 +28,8 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-              Nestled in the heart of Vancouver's Westside, Little Umbrella is more than just a café—it's 
-              a gathering place for neighbours, friends, and anyone seeking a moment of warmth in their day.
+              More than just a café—we're a gathering place for neighbours, friends, and anyone seeking 
+              a moment of warmth in their day. Our doors are always open to the community we love.
             </p>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">

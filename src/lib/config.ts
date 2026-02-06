@@ -1,19 +1,19 @@
-// Little Umbrella Café Configuration
+// Café Website Template Configuration
 // Edit this file to update site content easily
 
 export const siteConfig = {
-  name: "Little Umbrella",
+  name: "YourNameHere Cafe",
   tagline: "Great coffee. Honest food. Real connection.",
   mission:
-    "Great coffee. Honest food. Real Connection. We strive to be a neighbourhood cafe where quality and community meet.",
+    "Great coffee. Honest food. Real connection. We strive to be a neighbourhood cafe where quality and community meet.",
   description:
-    "Little Umbrella is a neighbourhood café in Vancouver where quality coffee and community meet. Enjoy our craft espresso, honest breakfast, and welcoming atmosphere.",
+    "YourNameHere Cafe is a neighbourhood café where quality coffee and community meet. Enjoy our craft espresso, honest breakfast, and welcoming atmosphere.",
 
   // Contact & Location
-  address: "4372 W 10th Ave, Vancouver, BC V6R 2H7",
-  phone: "(778) 452-5831",
-  phoneLink: "tel:+17784525831",
-  mapsLink: "https://maps.google.com/?q=4372+W+10th+Ave,+Vancouver,+BC+V6R+2H7",
+  address: "6133 University Blvd, Vancouver, BC V6T 1Z1",
+  phone: "(604) 555-1234",
+  phoneLink: "tel:+16045551234",
+  mapsLink: "https://maps.google.com/?q=University+of+British+Columbia,+Vancouver,+BC",
   priceRange: "$10–20",
   typicalStay: "15 min – 1 hr",
 
@@ -30,30 +30,30 @@ export const siteConfig = {
 
   // Social Links
   social: {
-    instagram: "https://instagram.com/littleumbrellacafe",
-    facebook: "https://facebook.com/littleumbrellacafe",
-    linkedin: "https://linkedin.com/company/littleumbrellacafe",
+    instagram: "https://instagram.com/yourcafe",
+    facebook: "https://facebook.com/yourcafe",
+    linkedin: "https://linkedin.com/company/yourcafe",
   },
 
   // Reviews
   reviews: {
     overall: 4.8,
     sources: [
-      { platform: "Uber Eats", rating: 4.8, count: 41 },
-      { platform: "Facebook", rating: 5.0, count: 1 },
+      { platform: "Google", rating: 4.8, count: 127 },
+      { platform: "Yelp", rating: 4.6, count: 84 },
     ],
     testimonials: [
       {
-        author: "Leah Zhiyanov",
-        text: "Delicious coffee, breakfast wraps, chia pudding and bakery items!",
+        author: "Marcus Chen",
+        text: "The best latte I've had in the city! Cozy atmosphere and friendly staff make this my go-to spot.",
       },
       {
-        author: "Ryan Brezzi",
-        text: "The owner and staff are super friendly and the environment is very welcoming.",
+        author: "Sarah Mitchell",
+        text: "Love coming here to work. Great WiFi, amazing pastries, and the coffee is always perfect.",
       },
       {
-        author: "Maya Cant",
-        text: "For food: also got a chocolate chip cookie, which was tasty and filling.",
+        author: "James Rodriguez",
+        text: "Hidden gem! Their breakfast wrap is incredible and the prices are very reasonable.",
       },
     ],
   },
