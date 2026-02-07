@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Set base path for GitHub Pages - update 'umbrella-reveal-cafe' to your repo name
-  base: mode === "production" ? "/umbrella-reveal-cafe/" : "/",
+  base: mode === "production" ? "/cafe-template/" : "/",
   server: {
     host: "::",
     port: 8080,
