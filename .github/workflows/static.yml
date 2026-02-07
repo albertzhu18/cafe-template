@@ -29,11 +29,9 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
       - name: Build
         run: npm run build
-      - name: Copy 404 for SPA routing
-        run: cp dist/index.html dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
