@@ -22,7 +22,7 @@ const Index = () => {
       streetAddress: "4372 W 10th Ave",
       addressLocality: "Vancouver",
       addressRegion: "BC",
-      postalCode: "V6R 2H7",
+      postalCode: "V6R 2G7",
       addressCountry: "CA",
     },
     telephone: siteConfig.phone,
@@ -52,11 +52,7 @@ const Index = () => {
         closes: "16:00",
       },
     ],
-    sameAs: [
-      siteConfig.social.instagram,
-      siteConfig.social.facebook,
-      siteConfig.social.linkedin,
-    ],
+    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook, siteConfig.social.linkedin],
   };
 
   return (
