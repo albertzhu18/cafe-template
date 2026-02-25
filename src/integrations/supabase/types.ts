@@ -14,7 +14,24 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_rate_limits: {
+        Row: {
+          client_ip: string
+          created_at: string
+          id: string
+        }
+        Insert: {
+          client_ip: string
+          created_at?: string
+          id?: string
+        }
+        Update: {
+          client_ip?: string
+          created_at?: string
+          id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
